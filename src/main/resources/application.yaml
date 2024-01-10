@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/productDb
+    username: postgres
+    password: 1
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: create-drop
+
+#discount:
+#  grpc:
+#    host: localhost
+#    port: 9090
+#
+#server:
+#  port: 8080
