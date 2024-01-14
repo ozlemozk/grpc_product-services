@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  product_postgres:
+    image: postgres
+    container_name: product_postgres
+    read_only: true
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=1
+      - POSTGRES_DB=productDb
+    expose:
+      - "5433"
+    ports:
+      - "5433:5432"
+    tmpfs:
+      - /tmp
+      - /run
+      - /run/postgresql
+    volumes:
+      - product-volume:/var/lib/postgresql/data
+    command: -p 5432
+
+volumes:
+  product-volume:
