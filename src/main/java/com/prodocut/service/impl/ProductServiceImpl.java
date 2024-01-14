@@ -2,6 +2,7 @@ package com.prodocut.service.impl;
 
 import com.prodocut.mapper.ProductServiceMapper;
 import com.prodocut.model.dto.ProductDto;
+import com.prodocut.model.entity.Product;
 import com.prodocut.repository.ProductRepository;
 import com.prodocut.service.ProductService;
 import org.springframework.stereotype.Service;
@@ -19,7 +20,10 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public ProductDto saveProduct(ProductDto dto) {
-        return null;
+        Product entity = mapper.dtoToEntity(dto);
+        repository.save(entity);
+        return dto;
+
     }
 
 }
