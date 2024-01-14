@@ -30,13 +30,17 @@ public class Product {
     @Column(name = "stock")
     private int stock;
 
-    @Column(name = "crate_date")
-    private LocalDate crateDate;
+ //   @Column(name = "crate_date")
+ //   private LocalDate crateDate;
 
     @ManyToOne
     @JoinColumn(name = "discountProduct_id", referencedColumnName = "id")
     @JsonBackReference
     private DiscountProduct discountProduct;
+
+    public void setDiscountProduct(DiscountProduct discountProduct) {
+        this.discountProduct = discountProduct;
+    }
 
 
 }

@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.springframework.format.annotation.DateTimeFormat;
 
 
 import java.io.Serializable;
@@ -33,8 +34,11 @@ public class ProductDto implements Serializable {
     @PositiveOrZero(message = "Price must be positive or zero")
     private int stock;
 
+/*
     @PastOrPresent(message = "Creation date must be in the past or present")
+    @DateTimeFormat()
     private LocalDate crateDate;
+*/
 
     @Valid
     @NotNull(message = "At least one discount product must be present")

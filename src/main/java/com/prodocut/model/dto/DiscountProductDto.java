@@ -9,6 +9,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.List;
 
@@ -16,7 +17,7 @@ import java.util.List;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class DiscountProductDto {
+public class DiscountProductDto implements Serializable {
     private List<Product> products;
 
     private Long id;
