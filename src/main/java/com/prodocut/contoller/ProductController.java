@@ -25,8 +25,7 @@ public class ProductController {
 
     @GetMapping
     public ResponseEntity<ProductDto> queryProduct(
-            @NotBlank(message = "Not Empty Name")
-            String name) {
+            @NotBlank(message = "Not Empty Name") String name) {
         return ResponseEntity.status(HttpStatus.OK).body(service.queryProduct(name));
 
     }
