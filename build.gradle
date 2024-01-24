@@ -39,6 +39,8 @@ dependencies {
     implementation 'io.grpc:grpc-netty:1.58.0'
 
     annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.5.Final'
+    implementation 'net.devh:grpc-spring-boot-starter:2.15.0.RELEASE' exclude group: 'io.grpc', module: 'grpc-netty-shaded' // For both
+
 
 }
 protobuf {

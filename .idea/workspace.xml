@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="198a0f59-aada-47d9-8482-1b9a6d419e1b" name="Changes" comment="logg aop basic add">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/prodocut/cache/CacheNames.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="198a0f59-aada-47d9-8482-1b9a6d419e1b" name="Changes" comment="redis add">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/prodocut/aop/logging/Logging.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prodocut/aop/logging/Logging.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/prodocut/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prodocut/service/impl/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prodocut/service/grpc/DiscountGrpcService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prodocut/service/grpc/DiscountGrpcService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prodocut/service/grpc/impl/DiscountGrpcServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prodocut/service/grpc/impl/DiscountGrpcServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -308,7 +304,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705515929926</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="redis add">
+      <option name="closed" value="true" />
+      <created>1706120554795</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1706120554795</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -319,7 +323,8 @@
     <MESSAGE value="200" />
     <MESSAGE value="Exception add" />
     <MESSAGE value="logg aop basic add" />
-    <option name="LAST_COMMIT_MESSAGE" value="logg aop basic add" />
+    <MESSAGE value="redis add" />
+    <option name="LAST_COMMIT_MESSAGE" value="redis add" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
