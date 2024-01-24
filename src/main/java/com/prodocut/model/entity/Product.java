@@ -7,6 +7,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
@@ -16,7 +17,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "products")
-public class Product {
+public class Product implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -30,8 +31,8 @@ public class Product {
     @Column(name = "stock")
     private int stock;
 
- //   @Column(name = "crate_date")
- //   private LocalDate crateDate;
+    //   @Column(name = "crate_date")
+    //   private LocalDate crateDate;
 
     @ManyToOne
     @JoinColumn(name = "discountProduct_id", referencedColumnName = "id")

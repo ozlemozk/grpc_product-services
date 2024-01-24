@@ -1,6 +1,7 @@
 package com.prodocut.service.impl;
 
 import com.prodocut.aop.exception.MyException;
+import com.prodocut.cache.CacheNames;
 import com.prodocut.mapper.DiscountProductMapper;
 import com.prodocut.mapper.ProductServiceMapper;
 import com.prodocut.model.dto.DiscountProductDto;
@@ -11,10 +12,16 @@ import com.prodocut.repository.DiscountProductRepository;
 import com.prodocut.repository.ProductRepository;
 import com.prodocut.service.ProductService;
 import jakarta.transaction.Transactional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.cache.annotation.Cacheable;
 
 @Service
 @Transactional()
+@EnableCaching()
 public class ProductServiceImpl implements ProductService {
     private final ProductServiceMapper mapper;
     private final ProductRepository repository;
@@ -47,11 +54,14 @@ public class ProductServiceImpl implements ProductService {
 
 
     @Override
+    @Cacheable(CacheNames.PRODUCT_NAMES)
     public ProductDto queryProduct(String name) {
+
         Product dto = repository.findByName(name);
         if (dto == null) {
             throw new MyException("Product not found: " + name);
         }
+        System.out.println("Veritabanına Erişildi! Cache Mekanizması Kullanılmadı.");
         return mapper.entityToDto(dto);
     }
 

@@ -10,6 +10,18 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
       ddl-auto: update
+
+  cache:
+    type: redis
+    redis:
+      host: localhost
+      port: 6379
+
+cache:
+  config:
+  entryTtl: 60
+  countryNames:
+    entryTtl: 30
 #logging:
 #  level:
 #    root: info
